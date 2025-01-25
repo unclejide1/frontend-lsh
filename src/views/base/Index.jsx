@@ -113,9 +113,9 @@ function Index() {
                                 <h1 className="display-3 fw-bold mb-3">Grow your SQL skills and advance your knowledge</h1>
                                 
                                 {/* btn */}
-                                <a href="#" className="btn btn-primary fs-4 text-inherit ms-3">
-                                    Start Learning <i className="fas fa-plus"></i>
-                                </a>
+                                <Link to="/student/courses/" className="btn btn-primary fs-4 text-inherit ms-3">
+    Start Learning <i className="fas fa-plus"></i>
+</Link>
                             </div>
                         </div>
                         {/* col */}
