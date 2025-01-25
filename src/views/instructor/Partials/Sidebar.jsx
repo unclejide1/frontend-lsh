@@ -91,7 +91,7 @@ function Sidebar() {
             </ul>
 
             {/* Navbar header */}
-            <span className="navbar-header mb-3">Account Settings</span>
+            {/* <span className="navbar-header mb-3">Account Settings</span>
             <ul className="list-unstyled ms-n2 mb-0">
               <li className="nav-item">
                 <Link className="nav-link" to={`/instructor/profile/`}>
@@ -111,7 +111,7 @@ function Sidebar() {
                   <i className="fas fa-sign-out-alt"></i> Sign Out
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </nav>
