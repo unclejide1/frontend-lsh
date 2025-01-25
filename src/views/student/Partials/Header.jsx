@@ -29,7 +29,7 @@ function Header() {
                                 <p className="mb-0 d-block">{profile.user?.email}</p>
                             </div>
                         </div>
-                        <div>
+                        {/* <div>
                             <div className="d-flex">
                                 <Link to="/instructor/create-course/" className="btn btn-primary btn-sm d-none d-md-block ms-2">
                                     {" "}
@@ -44,7 +44,7 @@ function Header() {
                                     Contact Support <i className="fas fa-phone"></i>
                                 </Link>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
