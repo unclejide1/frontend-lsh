@@ -12,6 +12,7 @@ import Header from "./Partials/Header";
 import useAxios from "../../utils/useAxios";
 import { userId } from "../../utils/constants";
 import Toast from "../plugin/Toast";
+import QuizSection from "./QuizSection"; // adjust the path as necessary
 import { FaCheckCircle, FaSpinner, FaTrash } from "react-icons/fa";
 
 function CourseDetail() {
@@ -741,32 +742,7 @@ function CourseDetail() {
                                 role="tabpanel"
                                 aria-labelledby="course-pills-tab-4"
                               >
-                                <div className="card">
-                                  <div className="card-header border-bottom p-0 pb-3 d-flex justify-content-between align-items-center">
-                                    <h4 className="mb-0 p-3">Quiz Questions</h4>
-                                    <button type="button" className="btn btn-primary me-3" onClick={handleQuizModalShow}>
-                                      Add Quiz Question <i className="fas fa-plus"></i>
-                                    </button>
-                                  </div>
-                                  <div className="card-body p-3">
-                                    {course?.quiz_questions && course.quiz_questions.length > 0 ? (
-                                      course.quiz_questions.map((quiz, index) => (
-                                        <div key={index} className="mb-3 p-3 border rounded">
-                                          <h5>{quiz.question_text}</h5>
-                                          <ul>
-                                            {quiz.options.map((opt, i) => (
-                                              <li key={i}>
-                                                {opt.option_text} {opt.is_correct && <strong>(Correct)</strong>}
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        </div>
-                                      ))
-                                    ) : (
-                                      <p>No quiz questions yet.</p>
-                                    )}
-                                  </div>
-                                </div>
+                                <QuizSection />
                               </div>
                               {/* Leave a Review */}
                               <div
