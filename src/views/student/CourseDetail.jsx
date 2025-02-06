@@ -542,7 +542,7 @@ function CourseDetail() {
     onChange={() => handleMarkCourseAsCompleted(l.variant_item_id)}
     className="form-check-input ms-2"
     checked={
-      course?.completed_lesson?.some((cl) => cl.variant_item.id === l.id) || false
+      course?.completed_lesson?.some((cl) => cl.variant_item_id === l.id) || false
     }
   />
 )}
