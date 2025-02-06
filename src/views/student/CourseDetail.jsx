@@ -537,13 +537,16 @@ function CourseDetail() {
                                                   <i className="fas fa-check-circle ms-2"></i>
                                                 )}
                                                 {markAsCompletedStatus[`lecture_${l.variant_item_id}`] === undefined && (
-                                                  <input
-                                                    type="checkbox"
-                                                    onChange={() => handleMarkCourseAsCompleted(l.variant_item_id)}
-                                                    className="form-check-input ms-2"
-                                                    checked={course.completed_lesson?.some((cl) => cl.variant_item.id === l.id) || false}
-                                                  />
-                                                )}
+  <input
+    type="checkbox"
+    onChange={() => handleMarkCourseAsCompleted(l.variant_item_id)}
+    className="form-check-input ms-2"
+    checked={
+      course?.completed_lesson?.some((cl) => cl.variant_item.id === l.id) || false
+    }
+  />
+)}
+
                                                 {markAsCompletedStatus[`lecture_${l.variant_item_id}`] === "Updating" && (
                                                   <i className="fas fa-spinner fa-spin ms-2"></i>
                                                 )}
