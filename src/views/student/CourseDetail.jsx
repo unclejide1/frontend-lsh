@@ -853,13 +853,13 @@ function CourseDetail() {
         </Modal.Header>
         <Modal.Body>
           <p>{variantitem?.description}</p>
-          {variantitem?.file && (
+          {/* {variantitem?.file && (
       <img
         src={variantitem?.file}
         alt="Lesson Image"
         className="img-fluid" // Bootstrap class for responsiveness
       />
-    )}
+    )} */}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
