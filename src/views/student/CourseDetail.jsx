@@ -484,7 +484,11 @@ function CourseDetail() {
                                     {completionPercentage}%
                                   </div>
                                 </div>
-                                {course?.curriculum?.map((c, index) => (
+                                {course?.curriculum?.length > 0 ?
+                                course?.curriculum?.map((c, index) =>{
+                                  if (!c) return null; // Skip if curriculum item is null or undefined
+                                  return (
+                                  
                                   <div className="accordion-item mb-3 p-3 bg-light rounded-3" key={index}>
                                     <div className="d-flex justify-content-between">
                                       <h6 className="accordion-header font-base" id={`heading-${c.variant_id}`}>
@@ -551,7 +555,10 @@ function CourseDetail() {
                                       </div>
                                     </div>
                                   </div>
-                                ))}
+                                );
+                              }) : (
+                                  <p>No curriculum found</p>
+                                )}
                               </div>
                               {/* Notes */}
                               <div
@@ -853,13 +860,13 @@ function CourseDetail() {
         </Modal.Header>
         <Modal.Body>
           <p>{variantitem?.description}</p>
-          {/* {variantitem?.file && (
+          {variantitem?.file && (
       <img
         src={variantitem?.file}
         alt="Lesson Image"
         className="img-fluid" // Bootstrap class for responsiveness
       />
-    )} */}
+    )}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
